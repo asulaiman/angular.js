@@ -142,6 +142,13 @@ components should follow a few simple conventions:
         });
       }
     ```
+  - You will also need to reference the output callbacks parameter on the parent component by the same name used within the
+    component internally.
+    ```html
+        <!-- note that we are referencing the hero property in the object parameter used in the invocation of the callback -->
+        <component on-delete="$ctrl.deleteHero(hero)"></component>
+    ```
+
 
 - **Components have a well-defined lifecycle**
 Each component can implement "lifecycle hooks". These are methods that will be called at certain points in the life
